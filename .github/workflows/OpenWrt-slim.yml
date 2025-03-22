@@ -148,24 +148,28 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        TAG_NAME="${{ env.TAG_TIME }}"
+        git tag "$TAG_NAME"
+        git push origin "$TAG_NAME"
+        echo "release_tag=$TAG_NAME" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_ X86_64（支持ipv6）" >> release.txt
-        echo "管理地址：192.168.2.1" >> release.txt
+        echo "OpenWrt-slim_ X86_64" >> release.txt
+        echo "管理地址：192.168.5.1" >> release.txt
         echo "默认密码：无密码" >> release.txt
-        echo "插件清单：ShadowSocksR Plus+，PassWall，OpenClash" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
       uses: softprops/action-gh-release@v2
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         name: ${{ env.FILE_TIME }} -OpenWrt-6.12-slim
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}/* 
+        files: ${{ env.FIRMWARE }}/*
 
     - name: 清理编译流程
       uses: Mattraks/delete-workflow-runs@main
