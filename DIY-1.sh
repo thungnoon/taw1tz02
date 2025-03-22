@@ -21,4 +21,4 @@ echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-pa
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
 
 # 7-添加 OpenClash 插件
-sed -i '$a\src-git homeproxy https://github.com/immortalwrt/homeproxy' ./feeds.conf.defaul 
+sed -i '$a\src-git homeproxy https://github.com/immortalwrt/homeproxy' ./feeds.conf.default 
