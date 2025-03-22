@@ -170,8 +170,8 @@ jobs:
     - name: 清理编译流程
       uses: Mattraks/delete-workflow-runs@main
       with:
-        retain_days: 50
-        keep_minimum_runs: 10
+        retain_days: 15
+        keep_minimum_runs: 8
 
     - name: 删除旧版固件
       uses: dev-drprasad/delete-older-releases@master
