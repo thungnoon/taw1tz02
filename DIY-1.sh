@@ -20,5 +20,5 @@ sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.con
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 
-# 2-添加 poweroffdevice 关机插件
+# 7-添加 poweroffdevice 关机插件
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroff
