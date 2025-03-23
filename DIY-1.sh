@@ -22,3 +22,6 @@ echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-pa
 
 # 7-添加 poweroffdevice 关机插件
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/luci-app-poweroff
+
+# 8-luci-theme-infinityfreedom 主题
+echo 'src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git' >>feeds.conf.default
