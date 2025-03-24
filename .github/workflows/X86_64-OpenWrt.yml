@@ -1,5 +1,7 @@
 name: X86_64 OpenWrt
 
+permissions: write-all
+
 on:
   workflow_dispatch:
   schedule:
