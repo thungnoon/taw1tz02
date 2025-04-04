@@ -101,6 +101,18 @@ git_sparse_clone master https://github.com/linkease/nas-packages network/service
 git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 git_sparse_clone main https://github.com/linkease/istore luci
 
+# nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci-app-nikki
+
+# homeproxy
+git clone --depth=1 https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
+
+# Poweroffdevice
+git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
+
+# partexp
+git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp package/luci-app-partexp
+
 # 在线用户
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
