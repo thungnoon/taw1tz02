@@ -79,10 +79,9 @@ git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns packag
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 # msd_lite
-# git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
-# git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
-git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-msd_lite
-
+git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+ 
 # MosDNS
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
