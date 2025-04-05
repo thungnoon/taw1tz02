@@ -57,7 +57,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/pswcore
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-openclash 
+# git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-openclash 
 
 # Themes
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
