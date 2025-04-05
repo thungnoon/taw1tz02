@@ -45,8 +45,8 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-adguardhome  
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-adguardhome
+git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-dockerman 
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
@@ -57,6 +57,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages package/pswcore
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
+git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-openclash 
 
 # Themes
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
@@ -78,8 +79,9 @@ git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns packag
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 # msd_lite
-git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
-git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+# git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+# git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-msd_lite
 
 # MosDNS
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
