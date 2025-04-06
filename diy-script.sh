@@ -45,8 +45,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-adguardhome
-git_sparse_clone openwrt-23.05 https://github.com/coolsnowwolf/luci applications/luci-app-dockerman 
+git clone --depth=1 -b 2023.10 https://github.com/XiaoBinin/luci-app-adguardhome.git package/luci-app-adguardhomee  
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
